@@ -12,6 +12,12 @@ class ToDoListPage extends StatefulWidget {
 
 class _ToDoListPageState
     extends ModularState<ToDoListPage, ToDoListController> {
+  var dbList;
+
+  void iniState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, presenter) {
@@ -33,12 +39,13 @@ class _ToDoListPageState
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: const Text('Add a task to your list'),
+            title: const Text('Adicione sua tarefa'),
             content: TextField(
               controller: controller.textFieldController,
-              decoration: const InputDecoration(hintText: 'Enter task here'),
+              decoration: const InputDecoration(hintText: 'Informe seu texto'),
             ),
             actions: <Widget>[
+              // ignore: deprecated_member_use
               FlatButton(
                 child: Text('Adicionar'),
                 onPressed: () {
@@ -46,6 +53,7 @@ class _ToDoListPageState
                   controller.addToDoItem(controller.textFieldController.text);
                 },
               ),
+              // ignore: deprecated_member_use
               FlatButton(
                 child: Text('cancelar'),
                 onPressed: () {

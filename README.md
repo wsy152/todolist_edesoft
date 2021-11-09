@@ -2,6 +2,14 @@
 
 A new Flutter project.
 
+Para este projeto.
+
+ Gerenciador de estado:
+ Modular com ChangerNotifier.
+ 
+
+ 
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
